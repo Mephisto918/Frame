@@ -57,7 +57,7 @@ video{
 }
 #frame2{
     -webkit-mask-image: url(./img/CircelFrame.png);
-    mask-image: url(../img/CircelFrame.png);
+    mask-image: url(./img/CircelFrame.png);
     background-color: transparent;
     mask-size: cover;
     mask-position: center;
