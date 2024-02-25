@@ -1,0 +1,227 @@
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99%;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#photo{
+    background-image: url(../img/Sample.jpg);
+    background-position: 50% 50%;
+    background-size: 225%;
+    width: 72%;
+    height: 91%;
+    position: absolute;
+    border-radius: 90%/90% 90% 90% 90%;
+}
+
+#frameholder{ /*from frame*/
+    top: -21.8%;
+    width: 140%; 
+    height: 140%;
+    position: absolute;
+}
+
+video{
+    width: 72%;
+    height: 91%;
+    
+    object-fit: cover; /*newly added*/
+    border-radius: 90% 90% 90% 90%;
+}
+/*                     2nd batch                    */
+.con2{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background-color: black;
+    border: 100px solid  black;
+    border-radius: 20px;
+    margin: 0%;
+}
+.color{
+    background-color: white;  
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background-size: cover;
+}
+#frame2{
+    -webkit-mask-image: url(../img/CircelFrame.png);
+    mask-image: url(../img/CircelFrame.png);
+    background-color: transparent;
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: -17.22%;
+    left: -24.3%;
+    background-size: cover;
+}
+#border2{
+    border-image: url(../img/OriginalFrame.png) 2000 fill / 50% / 0px round repeat;
+    -webkit-mask-image: url(../img/OriginalFrame.png); /*naay error pero mo gana na 100%*/
+    background-color: transparent;
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background-size: cover;
+}
+
+.inputsect{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+
+    width: 280px;
+    height: 400px;
+    position:fixed;
+    flex-direction: column;
+    padding: 10px;
+    left: 20px;
+    top: 20px;
+    border-radius: 30px;
+    background-color: gray;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100px;
+    background-color: rgb(55, 55, 56);
+    margin: 0px 0px 10px 0px;
+}
+.item{
+    width: 130px;
+    height: 40px;
+}
+input[type="range"]{
+    position: relative;
+    left: 0px;
+}
+/*                     2nd batch                    */
+@media (max-width: 690px) 
+{
+    
+    #photo{
+        background-image: url('../img/Sample.jpg');
+        background-position: 50% 50%;
+        background-size: 225%;
+        width: 72%;
+        height: 91%;
+        position: absolute;
+        border-radius: 90%/90% 90% 90% 90%;
+    }
+    .con2{
+        width: 200px;
+        height: 200px;
+        margin: 25%;
+        position: relative;
+        top: 25%;
+    }
+    .item{
+        display: flex;
+        width: 80%;
+        height: 100%;
+        flex-direction: column;
+        margin: 0px 0px 20px 0px;
+    }
+    label{
+        position: relative;
+        left: 0px;
+    }
+    .inputsect{
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        width: 97%;
+        height: 19%;
+        position:fixed;
+        left: 0%;
+        top: 75%;
+
+        overflow: scroll;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: brown;
+    }
+    input{
+        top: 0px;
+        left: 0%;
+        position: relative;
+    }
+    .row{
+        position: relative;
+        padding: 10px 0px ;
+        margin: 0px 0px;
+        width: 500px;
+        height: 30%;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: row;
+    }
+    input[type="range"]{
+        position: relative;
+        left: -30px;
+    }
+
+}
+
+/*                                           log                                  */
+
+/*log pro 8
+    now can control image hor and ver
+    new log in js file about API
+*/
+
+/*log pro7
+    now attempting it to fit in phones
+*/
+
+/*log prot 6
+    now has added background color selector
+    now has added border color selector
+    now has added slider for sizing the container
+*/
+
+/*log prot 5
+    now adding js and buttons
+
+*/
+
+/*log prot 4
+    log in html
+
+    video ratio fixed, how has been clipped
+*/
+
+/*log prot 3
+    added border. new discovery, border-image width only accepts up to 50%, higher than that changes nothing. offset also doesnt accept negative value.
+*/
+
+/*log prot 2
+    all container sizes are in %, that is to maintain its relative sizes to the container. 
+
+    container should have 1:1 ratio for it to display correctly.
+*/
