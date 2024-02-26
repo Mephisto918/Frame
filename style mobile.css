@@ -4,8 +4,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 99%;
-    height: 100%;
+    width: 97vw;
+    height: auto;
     flex-direction: column;
     overflow: hidden;
 }
@@ -93,10 +93,9 @@ video{
     position:fixed;
     flex-direction: column;
     padding: 10px;
-    left: 20px;
-    top: 20px;
-    border-radius: 30px;
-    background-color: gray;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(62, 61, 61);
 }
 .row{
     display: flex;
@@ -106,7 +105,6 @@ video{
 
     width: 100%;
     height: 100px;
-    background-color: rgb(55, 55, 56);
     margin: 0px 0px 10px 0px;
 }
 .item{
@@ -118,7 +116,7 @@ input[type="range"]{
     left: 0px;
 }
 /*                     2nd batch                    */
-@media (max-width: 690px) 
+@media (max-width: 990px) 
 {
     
     #photo{
@@ -137,55 +135,89 @@ input[type="range"]{
         position: relative;
         top: 25%;
     }
-    .item{
-        display: flex;
-        width: 80%;
-        height: 100%;
-        flex-direction: column;
-        margin: 0px 0px 20px 0px;
-    }
-    label{
-        position: relative;
-        left: 0px;
-    }
     .inputsect{
         overflow: scroll;
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        width: 97%;
+        width: calc(100vw); /* 40px is the total margin (20px on each side) */
+        margin: 0px 0px; /* 20px margin on each side */
         height: 19%;
         position:fixed;
-        left: 0%;
-        top: 75%;
 
+        left: 0%;
+        top: 74%;
         overflow: scroll;
         padding: 20px;
-        border-radius: 20px;
-        background-color: brown;
+        background-color: rgb(125,1,125);
     }
     input{
         top: 0px;
         left: 0%;
         position: relative;
     }
+    .item{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        margin: 0px 0px 20px 0px;
+    }
     .row{
         position: relative;
         padding: 10px 0px ;
         margin: 0px 0px;
         width: 500px;
-        height: 30%;
+        height: auto;
         display: flex;
         justify-content: start;
         align-items: start;
+        flex-direction: column;
+    }
+    .row-range{
+        position: relative;
+        padding: 10px 0px ;
+        margin: 0px 0px;
+        width: 500px;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }
+    .col{
+        position: relative;
+        padding: 10px 0px ;
+        margin: 0px 0px;
+        width: 500px;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: row;
+    }
+    .col-range{
+        position: relative;
+        padding: 10px 0px ;
+        margin: 0px 0px;
+        width: 500px;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
         flex-direction: row;
     }
     input[type="range"]{
         position: relative;
-        left: -30px;
+        width: 200px;
+        height: 30px;
+        left: 0px;
     }
-
+    label{
+        position: relative;
+        left: 0px;
+    }
 }
 
 /*                                           log                                  */

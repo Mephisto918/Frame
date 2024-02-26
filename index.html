@@ -9,12 +9,6 @@
 <body>
     <div class="con2">
         <div id="photo"></div>
-        <!--
-            <video controls loop autoplay muted>
-                <source src="./vid/dash.webm" type="video/mp4">
-            </video>
-        -->
-        
         <div id="frameholder">
             <div id="frame2">
                 <div class="color"></div>
@@ -35,24 +29,27 @@
                 <input type="color" id="colorbg" name="colorbg" onchange="changeColorBG(this.value)" >
             </div>
         </div>
-        <div class="row">
-            <div class="item">
-                <label for="imgver">Img Verticsl</label>
-                <input type="range" name="imgver" min="0" max="100" value="0" id="imgver"">
+        <div class="row-range">
+            <div class="col-range">
+                <div class="item">
+                    <label for="imgver">Img Verticsl</label>
+                    <input type="range" name="imgver" min="0" max="100" value="0" id="imgver"">
+                </div>
+                <div class="item">
+                    <label for="imghor">Img Horizontal</label>
+                    <input type="range" name="imghor" min="0" max="100" value="0" id="imghor">
+                </div>
             </div>
-            <div class="item">
-                <label for="imghor">Img Horizontal</label>
-                <input type="range" name="imghor" min="0" max="100" value="0" id="imghor">
-            </div>
-
-            <div class="item">
-                <label for="imgsize">Img Size</label>
-                <input type="range" name="imgsize" min="100" max="300" step="10" value="0" id="imgsize" style="direction:ltr;">
+            <div class="col-range">
+                <div class="item">
+                    <label for="imgsize">Img Size</label>
+                    <input type="range" name="imgsize" min="100" max="300" step="10" value="0" id="imgsize" style="direction:ltr;">
+                </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row-range">
             <div class="item">
-                <label for="consize">Change Size</label>
+                <label for="consize">Change Container Size</label>
                 <input type="range" name="consize" id="consize" min="300" max="470" value="0" style="direction:ltr;">
             </div>
         </div>
@@ -60,9 +57,6 @@
             <div class="item">
                 <label for="imgFile">Img File</label>
                 <input type="file" name="imgFile" id="imgFile">
-            </div>
-            <div class="item">
-                <button id="apply">Apply</button>
             </div>
         </div>
     </div>
