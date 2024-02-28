@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frame</title>
     <link rel="stylesheet" href="./style mobile.css">
+    <link rel="stylesheet" href="./css.items/colorbox.css">
+    <link rel="stylesheet" href="./css.items/mobile.css">
 </head>
 <body>
     <div class="con2">
@@ -20,13 +22,23 @@
     </div>
     <div class="inputsect">
         <div class="row">
-            <div class="item">
-                <label for="colorframe">Change Frame Color</label>
-                <input type="color" id="colorframe" name="colorframe" onchange="changeColorFr(this.value)" >
+            <div class="col">
+                <div class="item">
+                    <label for="colorframe">Change Frame Color</label>
+                    <input type="color" id="colorframe" name="colorframe" onchange="changeColorFr(this.value)" >
+                </div>
+                <div class="item">
+                    <label for="colorbg">Change Con BG Color</label>
+                    <input type="color" id="colorbg" name="colorbg" onchange="changeColorBG(this.value)" >
+                </div>
             </div>
-            <div class="item">
-                <label for="colorbg">Change Con BG Color</label>
-                <input type="color" id="colorbg" name="colorbg" onchange="changeColorBG(this.value)" >
+            <div class="col">
+                <div class="item but">
+                    <button id="configbg">Color Config</button>
+                </div>
+                <div class="item but">
+                    <button id="configframe">Color Config</button>
+                </div>
             </div>
         </div>
         <div class="row-range">
@@ -60,7 +72,56 @@
             </div>
         </div>
     </div>
+    <div id="rgbboxes">
+        <div class="colorboxbg">
+            <div class="colorrow">
+                <div class="score">
+                    <label for="redcolorbg">Red</label>
+                    <label for="redcolorbg" id="redlabelbg"></label>
+                </div>
+                <input type="range" name="redcolorbg" id="redcolorbg" min="0" max="255" value="0" style="direction: ltr;">
+            </div>
+            <div class="colorrow">
+                <div class="score">
+                    <label for="greencolorbg">Green</label>
+                    <label for="greencolorbg" id="greenlabelbg"></label>
+                </div>
+                <input type="range" name="greencolorbg" id="greencolorbg" min="0" max="255" value="0" style="direction: ltr;">
+            </div>
+            <div class="colorrow">
+                <div class="score">
+                    <label for="bluecolorbg">Blue</label>
+                    <label for="bluecolorbg" id="bluelabelbg"></label>
+                </div>
+                <input type="range" name="bluecolorbg" id="bluecolorbg" min="0" max="255" value="0" style="direction: ltr;">
+            </div>
+        </div>
+        <div class="colorboxframe">
+            <div class="colorrow">
+                <div class="score">
+                    <label for="redcolorframe">Red</label>
+                    <label for="redcolorframe" id="redlabelframe"></label>
+                </div>
+                <input type="range" name="redcolorframe" id="redcolorframe" min="0" max="255" value="0" style="direction: ltr;">
+            </div>
+            <div class="colorrow">
+                <div class="score">
+                    <label for="greencolorframe">Green</label>
+                    <label for="greencolorframe" id="greenlabelframe"></label>
+                </div>
+                <input type="range" name="greencolorframe" id="greencolorframe" min="0" max="255" value="0" style="direction: ltr;">
+            </div>
+            <div class="colorrow">
+                <div class="score">
+                    <label for="bluecolorframe">Blue</label>
+                    <label for="bluecolorframe" id="bluelabelframe"></label>
+                </div>
+                <input type="range" name="bluecolorframe" id="bluecolorframe" min="0" max="255" value="0" style="direction: ltr;">
+            </div>
+        </div>
+    </div>
 <script src="./scriptmobile.js"></script>
+<script src="./js.items/colorbox.js"></script>
 </body>
 <style>
     

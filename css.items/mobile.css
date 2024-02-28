@@ -1,0 +1,107 @@
+@import url(../style\ mobile.css);
+@import url(./colorbox.css);
+
+@media (max-width: 990px) 
+{
+    
+    #photo{
+        background-image: url('../img/Sample.jpg');
+        background-position: 50% 50%;
+        background-size: 225%;
+        width: 72%;
+        height: 91%;
+        position: absolute;
+        border-radius: 90%/90% 90% 90% 90%;
+    }
+    .con2{
+        width: 200px;
+        height: 200px;
+        margin: 25%;
+        position: fixed;
+        bottom: 20%;
+        border: 50px solid  black;
+        right: auto;
+    }
+    .inputsect{
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        margin: 0px 0px; /* 20px margin on each side */
+        width: 97vw;
+        height: 19%;
+        position:fixed;
+
+        left: 0%;
+        top: 77%;
+        padding: 20px;
+        background-color: rgb(125,1,125);
+    }
+    input{
+        top: 0px;
+        left: 0%;
+        position: relative;
+    }
+    .item{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        margin: 0px 0px 20px 0px;
+    }
+    .row{
+        position: relative;
+        padding: 10px 0px ;
+        margin: 0px 0px;
+        width: 50%;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: row;
+    }
+    .row-range{
+        position: relative;
+        padding: 10px 0px ;
+        margin: 0px 0px;
+        width: 500px;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: row;
+    }
+    .col{
+        position: relative;
+        padding: 10px 0px ;
+        margin: 0px 0px;
+        width: 500px;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }
+    .col-range{
+        position: relative;
+        padding: 10px 0px ;
+        margin: 0px 0px;
+        width: 500px;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }
+    input[type="range"]{
+        position: relative;
+        width: 200px;
+        height: 30px;
+        left: 0px;
+    }
+    label{
+        position: relative;
+        left: 0px;
+    }
+}

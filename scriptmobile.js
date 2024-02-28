@@ -1,4 +1,4 @@
-const colorSelect = document.getElementById('colorframe');
+const colorSelect = document.getElementById('colorframe');  //frame
 const target=document.getElementById('color');
 
 
@@ -12,7 +12,7 @@ function changeColorFr(value)
         });
 }
 
-const bgcolor=document.getElementById('colorbg');
+const bgcolor=document.getElementById('colorbg');  //bg
 const targetbg=document.querySelector('.con2'); //yawa walay . piste
 
 function changeColorBG(value)
@@ -21,7 +21,7 @@ function changeColorBG(value)
     targetbg.style.backgroundColor= value;
 }
 
-const resval=document.getElementById('consize');
+const resval=document.getElementById('consize');     //container size
 const con=document.querySelectorAll('.con, .con2');
 
     resval.addEventListener('input', function () 
@@ -41,30 +41,29 @@ const con=document.querySelectorAll('.con, .con2');
         });
     });
 
-/*   prot 8 log || has no security restrictions because File API  */ 
-const imgsize = document.getElementById('imgsize');
+
+const imgsize = document.getElementById('imgsize');  
 const photsize = document.getElementById('photo');
     imgsize.addEventListener('input', function () {
      const value = parseInt(this.value);
         photsize.style.backgroundSize  = value + '%';
-        
-        
-        
     });
 
-    const imgFile = document.getElementById('imgFile');
-    const photo = document.getElementById('photo');
     
-    imgFile.addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        const reader = new FileReader();
-        
-        reader.onload = function(e) {
-            photo.style.backgroundImage = `url(${e.target.result})`;
-        };
-        
-        reader.readAsDataURL(file);
-    });
+/*   prot 8 log || has no security restrictions because File API  */   
+const imgFile = document.getElementById('imgFile');
+const photo = document.getElementById('photo');
+
+imgFile.addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    
+    reader.onload = function(e) {
+        photo.style.backgroundImage = `url(${e.target.result})`;
+    };
+    
+    reader.readAsDataURL(file);
+});
 
 /*  prot 8 log || has security restrictions because FileReader API
 const imgFile = document.getElementById('imgFile');
@@ -88,7 +87,7 @@ applybt.addEventListener('click', function(){
 */
 
 
-const imghor = document.getElementById('imghor');
+const imghor = document.getElementById('imghor');   //image location control
 const imgver = document.getElementById('imgver');
 const phototar = document.getElementById('photo');
     
@@ -106,7 +105,8 @@ const phototar = document.getElementById('photo');
             let y=imgver.value;
             phototar.style.backgroundPosition  = x+'% '+y+'%';
         }
-document.addEventListener('DOMContentLoaded', function() {
+
+document.addEventListener('DOMContentLoaded', function() {   //to set the input range at the middle upon loading the browser
     const ranger = document.querySelectorAll('#imghor, #imgver');
     ranger.forEach(range =>{
         range.value = range.max/2;
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-const inputrange=document.getElementById('consize');
+const inputrange=document.getElementById('consize');   //media query alternatives for range input values
 
 function updateRangeWithScreen() /* prot 8 */ 
 {

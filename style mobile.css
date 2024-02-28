@@ -1,6 +1,6 @@
 body{
     background-color: black;
-    color: white;
+    color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,16 +8,7 @@ body{
     height: auto;
     flex-direction: column;
     overflow: hidden;
-}
-
-#photo{
-    background-image: url(./img/Sample.jpg);
-    background-position: 50% 50%;
-    background-size: 225%;
-    width: 72%;
-    height: 91%;
-    position: absolute;
-    border-radius: 90%/90% 90% 90% 90%;
+    font-size: 10pt;
 }
 
 #frameholder{ /*from frame*/
@@ -25,35 +16,6 @@ body{
     width: 140%; 
     height: 140%;
     position: absolute;
-}
-
-video{
-    width: 72%;
-    height: 91%;
-    
-    object-fit: cover; /*newly added*/
-    border-radius: 90% 90% 90% 90%;
-}
-/*                     2nd batch                    */
-.con2{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    height: 300px;
-    position: relative;
-    background-color: black;
-    border: 100px solid  black;
-    border-radius: 20px;
-    margin: 0%;
-}
-.color{
-    background-color: white;  
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    background-size: cover;
 }
 #frame2{
     -webkit-mask-image: url(./img/CircelFrame.png);
@@ -82,143 +44,126 @@ video{
     background-size: cover;
 }
 
+.color{
+    background-color: white;  
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background-size: cover;
+}
+
+video{
+    width: 72%;
+    height: 91%;
+    
+    object-fit: cover; /*newly added*/
+    border-radius: 90% 90% 90% 90%;
+}
+/*                     2nd batch                    */
+
+#photo{
+    background-image: url(./img/Sample.jpg);
+    background-position: 50% 50%;
+    background-size: 225%;
+    width: 72%;
+    height: 91%;
+    position: absolute;
+    border-radius: 90%/90% 90% 90% 90%;
+}
+
+.con2{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    right: -13%;
+    background-color: black;
+    border: 80px solid  black;
+    border-radius: 20px;
+    margin: 0%;
+}
+
 .inputsect{
+    overflow: hidden;
+    touch-action: cross-slide-y;
     display: flex;
+    flex-direction: column;
     justify-content: start;
     align-items: start;
-
 
     width: 280px;
     height: 400px;
     position:fixed;
-    flex-direction: column;
+    
     padding: 10px;
     left: 0px;
     top: 0px;
-    background-color: rgb(62, 61, 61);
+    background-color: rgb(39, 39, 39);
 }
-.row{
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-
-    width: 100%;
-    height: 100px;
-    margin: 0px 0px 10px 0px;
+input{
+    top: 0px;
+    left: 0%;
+    position: relative;
 }
 .item{
+    display: flex;
     width: 130px;
     height: 40px;
+    flex-direction: column;
+    margin: 0px 0px 20px 0px;
 }
+        
+.row{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: row;
+}
+.row-range{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: row;
+}
+.col{
+    position: relative;
+    margin: 0px 0px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+.col-range{
+    position: relative;
+    margin: 0px 0px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
 input[type="range"]{
     position: relative;
     left: 0px;
 }
-/*                     2nd batch                    */
-@media (max-width: 990px) 
-{
-    
-    #photo{
-        background-image: url('./img/Sample.jpg');
-        background-position: 50% 50%;
-        background-size: 225%;
-        width: 72%;
-        height: 91%;
-        position: absolute;
-        border-radius: 90%/90% 90% 90% 90%;
-    }
-    .con2{
-        width: 200px;
-        height: 200px;
-        margin: 25%;
-        position: relative;
-        top: 25%;
-    }
-    .inputsect{
-        overflow: scroll;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: start;
-        width: calc(100vw); /* 40px is the total margin (20px on each side) */
-        margin: 0px 0px; /* 20px margin on each side */
-        height: 19%;
-        position:fixed;
-
-        left: 0%;
-        top: 74%;
-        overflow: scroll;
-        padding: 20px;
-        background-color: rgb(125,1,125);
-    }
-    input{
-        top: 0px;
-        left: 0%;
-        position: relative;
-    }
-    .item{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
-        margin: 0px 0px 20px 0px;
-    }
-    .row{
-        position: relative;
-        padding: 10px 0px ;
-        margin: 0px 0px;
-        width: 500px;
-        height: auto;
-        display: flex;
-        justify-content: start;
-        align-items: start;
-        flex-direction: column;
-    }
-    .row-range{
-        position: relative;
-        padding: 10px 0px ;
-        margin: 0px 0px;
-        width: 500px;
-        height: auto;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        flex-direction: column;
-    }
-    .col{
-        position: relative;
-        padding: 10px 0px ;
-        margin: 0px 0px;
-        width: 500px;
-        height: auto;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        flex-direction: row;
-    }
-    .col-range{
-        position: relative;
-        padding: 10px 0px ;
-        margin: 0px 0px;
-        width: 500px;
-        height: auto;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        flex-direction: row;
-    }
-    input[type="range"]{
-        position: relative;
-        width: 200px;
-        height: 30px;
-        left: 0px;
-    }
-    label{
-        position: relative;
-        left: 0px;
-    }
+label{
+    position: relative;
+    left: 0px;
 }
+button{
+    width: 60px;
+    height: 30px;
+}
+.but{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*                     2nd batch                    */
+
 
 /*                                           log                                  */
 

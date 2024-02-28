@@ -1,0 +1,144 @@
+@import url(../style\ mobile.css);
+@import url(./mobile.css);
+
+#rgbboxes{
+    width: 299px;
+    height: 150px;
+    background-color: transparent;
+    position: fixed;
+    top: 420px;
+    left: 0px;
+
+    overflow: auto;
+
+    display: none;
+
+}
+
+.colorboxbg{
+    width: inherit;
+    height: 100px;
+    background-color: transparent;
+
+    display: none;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+
+    position: relative;
+    right: 0px;
+    top: 0px;
+    overflow: hidden;
+    padding: 10px;
+}
+.colorboxframe{
+    width: inherit;
+    height: 100px;
+    background-color: transparent;
+
+    display: none;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+
+    position: relative;
+    right: 0px;
+    top: 0px;
+    overflow: hidden;
+    padding: 10px;
+}
+.colorrow{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+
+    width: 100%;
+    height: 50px;
+    margin: 0px 0px;
+}
+.colorrow input[type="range"]{
+    order: 1;
+    width: 97%;
+}
+.score{
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+@media (max-width: 990px)
+{
+    #rgbboxes{
+        width: 100vw;
+        height: 9vh;
+        background-color: transparent;
+        position: fixed;
+        top: 68vh;
+        left: 0px;
+        overflow: scroll;
+        
+        display: none;
+        justify-content: start;
+        align-items: start;
+    }
+    .colorboxbg{
+        width: inherit;
+        height: 7vh;
+        background-color: transparent;
+    
+        display:none;
+        justify-content: start;
+        align-items: start;
+        flex-direction: row;
+    
+        position: relative;
+        right: 0px;
+        top: 0px;
+        overflow: auto;
+        padding: 10px;
+    }
+    .colorboxframe{
+        width: inherit;
+        height: 7vh;
+        background-color: transparent;
+    
+        display:none;
+        justify-content: start;
+        align-items: start;
+        flex-direction: row;
+    
+        position: relative;
+        right: 0px;
+        top: 0px;
+        overflow: auto;
+        padding: 10px;
+    }
+    .colorrow{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+    
+        width: 100%;
+        height: 50px;
+    }
+    .colorrow input[type="range"]{
+        order: 1;
+        width: 80%;
+    }
+    .score{
+        width: 78%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    
+}
+
+#rgbboxes::-webkit-scrollbar {
+    display: none; /* to hide the scrollbar */
+}
